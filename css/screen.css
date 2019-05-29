@@ -19,7 +19,16 @@ a:visited { color: #65b1ff}
 
 /* Header */
 
-header { height: 670px; background: #faffff url(https://engonetac.blob.core.windows.net/assets/uploads/img/Artboard%20.png) no-repeat center bottom; position: relative; }
+header {
+  height: 500px;
+  background: #faffff url(https://engonetac.blob.core.windows.net/assets/uploads/img/Artboard%20.png) no-repeat center bottom;
+  position: relative;
+  text-align: center;
+}
+
+header + h2 {
+  position: absolute;
+}
 
 /* Section - All */
 
@@ -28,10 +37,10 @@ section { padding: 0 30px; }
 
 /* Navigation */
 
-nav { 
+nav {
     position: absolute;
     top: 0px; left: 0px;
-    padding: 50px 0 0 0;
+    padding: 150px 200px  150px 150px;
     width: 100%;
 }
 
@@ -39,7 +48,7 @@ nav::after { content:''; display: block; clear: both; }
 
 nav ul { list-style: none; margin: 0; padding 0; }
 
-nav ul li a { 
+nav ul li  {
     display: inline-block;
     text-align: center;
     color: #777480;
@@ -56,4 +65,41 @@ nav ul li a:hover { color: #000; }
 
 @media screen and (max-width: 1125px) {
 
+}
+
+header > h1 {
+  color: black;
+}
+
+section.donate {
+  position: relative;
+  margin: 0px 20px 20px 20px;
+  padding: 20px 0px 20px 0px;
+  border: 3px solid #50BFA0;
+  text-align: center;
+}
+
+section.donate button {
+  border: 3px solid #50BFA0;
+  background-color: #FFFFFF;
+}
+
+section.donate button:hover{
+  background-color:#50BFA0;
+}
+
+section.Form{
+  border: 3px solid #50BFA0;
+  margin: 0px 20px 20px 20px;
+  text-align:justify;
+}
+
+
+input[type=submit]:hover {
+  background-color:#50BFA0;
+}
+
+input{
+  border: 3px solid #50BFA0;
+  background-color: #FFFFFF;
 }
