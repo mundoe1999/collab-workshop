@@ -15,15 +15,27 @@ h2 { margin: 0 0 .5em 0; font-size: 1.4em; font-weight: 500; line-height: 1.1em;
 
 p { margin: 0 0 1em 0; }
 
-a { color: #007eff; }
-a:visited { color: #65b1ff}
+a { color: #F26241; }
+a:visited { color: #F26241}
 
 /* Header */
 
-header {
+.home{
   height: 670px;
-  background: #faffff url(../img/Adption-Header-1.jpg) no-repeat center bottom; 
+  background: #faffff url(../img/Adption-Header-1.jpg) no-repeat center bottom ; 
+  background: #faffff url(../img/logo.gif) no-repeat left top ; 
   position: relative;
+}
+
+.donations{
+  height: 670px;
+  background: #faffff url(../img/Donation-Header-4.jpg) no-repeat center bottom; 
+  position: relative;
+  object-fit: contain;  
+}
+
+header {
+
 }
 
 header h1 {
@@ -67,22 +79,29 @@ nav::after { content:''; display: block; clear: both; }
 
 nav ul { list-style: none; margin: 0; padding: 0; }
 
-nav ul li  {
+ nav ul li a {
     display: inline-block;
     text-align: center;
-    color: #777480;
+    color: #FFF;
     padding: 10px 5px;
     text-decoration: none;
     width: 100px;
     position: relative;
 }
 
-nav ul li a:visited { color: #777480; }
-nav ul li a:hover { color: #000; }
+/* nav ul li a:visited { color: #777480; } */
+nav ul li a:hover { color: #aaa; }  
+nav ul li a:visited { color: #FFF; }  
 
 nav > ul { padding-right: 20px; }
 
-nav > ul > li { float: right; }
+nav > ul > li { 
+  float: right; 
+  border-left: 1px solid; 
+  border-color: #aaa; 
+  padding: 0.2em 1em; 
+
+}
 
 /* Media Queries */
 
@@ -122,3 +141,10 @@ input{
   border: 3px solid #50BFA0;
   background-color: #FFFFFF;
 }
+
+section{
+  padding-top: 4em; 
+  padding-left: 10%;
+  width: 70%; 
+}
+
