@@ -3,7 +3,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 body { font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 300; color: #777480;
-    margin: 0; padding: 0; background: #faffff; }
+    margin: 0; padding: 0; background: #faffff; 
+    max-width: 1200px; margin: 0 auto; position: relative;}
 
 #page { max-width: 1200px; margin: 0 auto; position: relative; }
 
@@ -20,14 +21,32 @@ a:visited { color: #65b1ff}
 /* Header */
 
 header {
-  height: 500px;
-  background: #faffff url(https://engonetac.blob.core.windows.net/assets/uploads/img/Artboard%20.png) no-repeat center bottom;
+  height: 670px;
+  background: #faffff url(../img/Adption-Header-1.jpg) no-repeat center bottom; 
   position: relative;
-  text-align: center;
 }
 
-header + h2 {
-  position: absolute;
+header h1 {
+  text-align: left;
+  position: absolute; 
+  display: block; width: 540px; height: 100px;
+  left: 0px; top: 0px; 
+  font-size: 3.6em; font-weight: 600;
+  margin: 0 0 10px 0; 
+  color: #fafafa
+}
+
+header h2 {
+  text-align: left;
+  position: absolute; 
+  display: block; width: 860px; height: 140px;
+  background: #ffffff;
+  opacity: 0.7;
+  left: 0px; bottom: 60px; 
+  font-size: 3.6em; font-weight: 800;
+  margin: 0 0 10px 0; 
+  color: #ffa500;
+
 }
 
 /* Section - All */
@@ -40,13 +59,13 @@ section { padding: 0 30px; }
 nav {
     position: absolute;
     top: 0px; left: 0px;
-    padding: 150px 200px  150px 150px;
+    padding: 20px 0 0 0;
     width: 100%;
 }
 
 nav::after { content:''; display: block; clear: both; }
 
-nav ul { list-style: none; margin: 0; padding 0; }
+nav ul { list-style: none; margin: 0; padding: 0; }
 
 nav ul li  {
     display: inline-block;
@@ -54,21 +73,21 @@ nav ul li  {
     color: #777480;
     padding: 10px 5px;
     text-decoration: none;
-    width: 150px;
+    width: 100px;
     position: relative;
 }
 
 nav ul li a:visited { color: #777480; }
 nav ul li a:hover { color: #000; }
 
+nav > ul { padding-right: 20px; }
+
+nav > ul > li { float: right; }
+
 /* Media Queries */
 
 @media screen and (max-width: 1125px) {
 
-}
-
-header > h1 {
-  color: black;
 }
 
 section.donate {
