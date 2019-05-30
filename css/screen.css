@@ -3,7 +3,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 body { font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 300; color: #777480;
-    margin: 0; padding: 0; background: #faffff; }
+    margin: 0; padding: 0; background: #faffff;
+    max-width: 1200px; margin: 0 auto; position: relative;}
 
 #page { max-width: 1200px; margin: 0 auto; position: relative; }
 
@@ -14,21 +15,72 @@ h2 { margin: 0 0 .5em 0; font-size: 1.4em; font-weight: 500; line-height: 1.1em;
 
 p { margin: 0 0 1em 0; }
 
-a { color: #007eff; }
-a:visited { color: #65b1ff}
+a { color: #F26241; }
+a:visited { color: #F26241}
 
 /* Header */
 
-header {
-  height: 500px;
-  background: #faffff url(https://engonetac.blob.core.windows.net/assets/uploads/img/Artboard%20.png) no-repeat center bottom;
+.home{
+  height: 670px;
+  background: url(../img/logo.gif) no-repeat left top , url(../img/Adption-Header-1.jpg) no-repeat center bottom #faffff  ;
+  background-size: 200px, auto;
   position: relative;
-  text-align: center;
+  ;
 }
 
-header + h2 {
-  position: absolute;
+.donations{
+  /*height: 670px;*/
+  /*background: #faffff url(../img/Donation-Header-4.jpg) no-repeat center bottom;*/
+  height: 250px;
+  background: url(../img/logo.gif) no-repeat left bottom #F26241;
+  background-size: 200px, auto;
+  position: relative;
+  object-fit: contain;
 }
+
+.apply{
+  height: 250px;
+  background: url(../img/logo.gif) no-repeat left bottom #50BFA0;
+  background-size: 200px, auto;
+  position: relative;
+  object-fit: contain;
+}
+
+.expectations{
+  height: 250px;
+  background: url(../img/logo.gif) no-repeat left bottom #745DA6;
+  background-size: 200px, auto;
+  position: relative;
+  object-fit: contain;
+}
+
+header {
+
+}
+
+header h1 {
+  text-align: left;
+  position: absolute;
+  display: block; width: 540px; height: 100px;
+  left: 0px; top: 0px;
+  font-size: 3.6em; font-weight: 600;
+  margin: 0 0 10px 0;
+  color: #fafafa
+}
+
+header h2 {
+  text-align: left;
+  position: absolute;
+  display: block; width: 860px; height: 140px;
+  background: #ffffff;
+  opacity: 0.7;
+  left: 0px; bottom: 60px;
+  font-size: 3.6em; font-weight: 800;
+  margin: 0 0 10px 0;
+  color: #ffa500;
+
+}
+
 
 /* Section - All */
 
@@ -40,26 +92,37 @@ section { padding: 0 30px; }
 nav {
     position: absolute;
     top: 0px; left: 0px;
-    padding: 150px 200px  150px 150px;
+    padding: 20px 0 0 0;
     width: 100%;
 }
 
 nav::after { content:''; display: block; clear: both; }
 
-nav ul { list-style: none; margin: 0; padding 0; }
+nav ul { list-style: none; margin: 0; padding: 0; }
 
-nav ul li  {
+ nav ul li a {
     display: inline-block;
     text-align: center;
-    color: #777480;
+    color: #FFF;
     padding: 10px 5px;
     text-decoration: none;
-    width: 150px;
+    width: 100px;
     position: relative;
 }
 
-nav ul li a:visited { color: #777480; }
-nav ul li a:hover { color: #000; }
+/* nav ul li a:visited { color: #777480; } */
+nav ul li a:hover { color: #aaa; }
+nav ul li a:visited { color: #FFF; }
+
+nav > ul { padding-right: 20px; }
+
+nav > ul > li {
+  float: right;
+  border-left: 1px solid;
+  border-color: #aaa;
+  padding: 0.2em 1em;
+
+}
 
 /* Media Queries */
 
@@ -67,31 +130,31 @@ nav ul li a:hover { color: #000; }
 
 }
 
-header > h1 {
-  color: black;
-}
-
 section.donate {
   position: relative;
-  margin: 0px 20px 20px 20px;
-  padding: 20px 0px 20px 0px;
-  border: 3px solid #50BFA0;
+  background-color:#F26241;
+  color: #FFFFFF;
   text-align: center;
+  padding-right: 250px;
+  padding-bottom: 50px;
 }
 
 section.donate button {
-  border: 3px solid #50BFA0;
+  border: 3px solid #F2C849;
   background-color: #FFFFFF;
 }
 
 section.donate button:hover{
-  background-color:#50BFA0;
+  background-color:#F2C849;
 }
 
 section.Form{
-  border: 3px solid #50BFA0;
-  margin: 0px 20px 20px 20px;
-  text-align:justify;
+  background: #50BFA0;
+  text-align: justify;
+  color: #FFFFFF;
+  padding-right: 250px;
+  padding-bottom: 50px;
+
 }
 
 
@@ -102,4 +165,10 @@ input[type=submit]:hover {
 input{
   border: 3px solid #50BFA0;
   background-color: #FFFFFF;
+}
+
+section{
+  padding-top: 4em;
+  padding-left: 10%;
+  width: 70%;
 }
