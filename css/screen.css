@@ -4,9 +4,10 @@
 
 body { font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 300; color: #777480;
     margin: 0; padding: 0; background: #faffff; 
-    max-width: 1200px; margin: 0 auto; position: relative;}
+     margin: 0 auto; position: relative;}
 
-#page { max-width: 1200px; margin: 0 auto; position: relative; }
+
+#page { max-width: 1200px; margin: 0 auto 5em auto; position: relative; }
 
 /* Text */
 
@@ -20,22 +21,56 @@ a:visited { color: #F26241}
 
 /* Header */
 
-.home{
+#home{
   height: 670px;
   background: #faffff url(../img/Adption-Header-1.jpg) no-repeat center bottom ; 
-  background: #faffff url(../img/logo.gif) no-repeat left top ; 
+ /* background: #faffff url(../img/logo.gif) no-repeat left top ; */
   position: relative;
 }
 
-.donations{
+#home > h2{
+  position: absolute;
+  padding-left: 0.2em;
+  top: 60%;
+}
+
+#donations{
   height: 670px;
   background: #faffff url(../img/Donation-Header-4.jpg) no-repeat center bottom; 
   position: relative;
   object-fit: contain;  
 }
 
-header {
+#donations > h2{
+  position: absolute;
+  padding-left: 0.2em;
+  top: 60%;
+}
 
+#resources{
+  height: 670px;
+  background: #faffff url(../img/Donation-Header-3.jpg) no-repeat center bottom; 
+  position: relative;
+  object-fit: contain;  
+}
+
+#resources > h2{
+  position: absolute;
+  padding-left: 0.2em;
+  top: 60%;
+}
+
+#applyNow{
+  height: 670px;
+  background: #faffff url(../img/Donation-Header-3.jpg) no-repeat center bottom; 
+  position: relative;
+  object-fit: contain;  
+}
+
+#applyNow > h2{
+  position: absolute;
+  padding-left: 0.2em;
+  top: 60%;
 }
 
 header h1 {
@@ -50,16 +85,24 @@ header h1 {
 
 header h2 {
   text-align: left;
+  justify-content: center;
   position: absolute; 
   display: block; width: 860px; height: 140px;
   background: #ffffff;
   opacity: 0.7;
   left: 0px; bottom: 60px; 
   font-size: 3.6em; font-weight: 800;
-  margin: 0 0 10px 0; 
+  margin: auto; 
   color: #ffa500;
 
 }
+
+
+
+.flexContainer{
+  display: flex;
+}
+
 
 /* Section - All */
 
@@ -69,10 +112,13 @@ section { padding: 0 30px; }
 /* Navigation */
 
 nav {
-    position: absolute;
-    top: 0px; left: 0px;
-    padding: 20px 0 0 0;
+  z-index: 20;
+    position: sticky;
+    top: 0;
+    padding: 0.5em 0em;
     width: 100%;
+    background-color: #84D78D;
+    opacity: 0.9;
 }
 
 nav::after { content:''; display: block; clear: both; }
@@ -82,16 +128,17 @@ nav ul { list-style: none; margin: 0; padding: 0; }
  nav ul li a {
     display: inline-block;
     text-align: center;
-    color: #FFF;
+    color: #000;
+    opacity: 1;
     padding: 10px 5px;
     text-decoration: none;
-    width: 100px;
     position: relative;
 }
 
-/* nav ul li a:visited { color: #777480; } */
-nav ul li a:hover { color: #aaa; }  
-nav ul li a:visited { color: #FFF; }  
+ nav ul li a:visited { color: #000; } 
+
+
+nav ul li a:hover { color: #F26241; }   
 
 nav > ul { padding-right: 20px; }
 
@@ -103,6 +150,10 @@ nav > ul > li {
 
 }
 
+.active{
+  background-color: #DFD354;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 1125px) {
@@ -111,15 +162,17 @@ nav > ul > li {
 
 section.donate {
   position: relative;
-  margin: 0px 20px 20px 20px;
-  padding: 20px 0px 20px 0px;
+  margin: 2em auto;
+  padding: 2em;
   border: 3px solid #50BFA0;
   text-align: center;
 }
 
 section.donate button {
-  border: 3px solid #50BFA0;
+  border: 1px solid #50BFA0;
   background-color: #FFFFFF;
+  font-size: 1em;
+  margin: 0.2em;
 }
 
 section.donate button:hover{
@@ -128,11 +181,28 @@ section.donate button:hover{
 
 section.Form{
   border: 3px solid #50BFA0;
-  margin: 0px 20px 20px 20px;
-  text-align:justify;
+  margin: 1em auto;
+  padding: 2em;
+  text-align:center;
+
 }
 
+.choiceCenter{
+  display: block;
+  text-align: left;
+  margin: 0 auto;
+  padding-left: 30%; 
+  
+}
 
+.choiceCenter ul{
+  list-style: none;
+  padding-left: 0;
+}
+
+input[type=submit] {
+  font-size: 1em;
+}
 input[type=submit]:hover {
   background-color:#50BFA0;
 }
